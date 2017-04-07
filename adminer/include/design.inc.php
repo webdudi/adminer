@@ -35,6 +35,10 @@ function page_header($title, $error = "", $breadcrumb = array(), $title2 = "") {
 <?php } ?>
 
 <body class="<?php echo lang('ltr'); ?> nojs" onkeydown="bodyKeydown(event);" onclick="bodyClick(event);"<?php echo (isset($_COOKIE["adminer_version"]) ? "" : " onload=\"verifyVersion('$VERSION');\""); ?>>
+    <div
+        style="line-height: 2em; z-index: 100000; margin: 0 auto; width: 20%; height: 2em; position: relative; background: #ff0000; text-align: center; color: #ffffff; font-weight: bold;">
+        !!! Jesteś na produkcji !!!
+    </div>
 <script type="text/javascript">
 document.body.className = document.body.className.replace(/ nojs/, ' js');
 var offlineMessage = '<?php echo js_escape(lang('You are offline.')); ?>';
